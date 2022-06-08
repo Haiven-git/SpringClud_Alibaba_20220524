@@ -1,0 +1,17 @@
+server:
+  port: 6001
+
+#服务启动之后 直接去注册到dashboard
+spring:
+  cloud:
+    sentinel:
+      datasource:
+        ds:
+          nacos:
+            server-addr: localhost:8848
+            dataId: cloud-alibaba
+            groupId: DEFAULT_GROUP
+            ruleType: flow
+  application:
+    name: cloud-alibaba
+
